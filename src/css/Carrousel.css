@@ -1,0 +1,17 @@
+.carrousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.carrousel-slide {
+  width: 100%;
+}
+
+.carrousel-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}

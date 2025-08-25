@@ -44,7 +44,7 @@ const CartPage = () => {
 
   // Configuración para producción
   const WOMPI_API_URL = 'https://production.wompi.co/v1';
-  const WOMPI_PUBLIC_KEY = process.env.REACT_APP_WOMPI_PUBLIC_KEY || 'pub_prod_WixDpB6CttsHQtutUQTpYwwiWN54qEEc';
+  
   const WOMPI_MERCHANT_ID = process.env.REACT_APP_WOMPI_MERCHANT_ID || '1552149';
   const API_URL = process.env.REACT_APP_API_URL || 'https://tu-backend.vercel.app';
 

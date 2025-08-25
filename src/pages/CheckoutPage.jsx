@@ -4,7 +4,7 @@ import { useCart } from '../context/CartContext';
 import axios from 'axios';
 
 const CheckoutPage = () => {
-  const { cartItems, clearCart } = useCart();
+  const { cartItems, } = useCart();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',

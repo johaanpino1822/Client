@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import { FaSearch, FaTrash, FaEdit, FaAngleLeft, FaAngleRight, FaAngleDoubleLeft, FaAngleDoubleRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -18,21 +18,8 @@ const UserList = () => {
   const [usersPerPage] = useState(10); // 10 usuarios por página
   const [totalUsers, setTotalUsers] = useState(0);
 
-  // Paleta de colores profesional
-  const colors = {
-    primary: '#0C4B45',
-    primaryLight: '#83F4E9',
-    primaryDark: '#083D38',
-    secondary: '#662D8F',
-    secondaryLight: '#F2A9FD',
-    accent: '#4CAF50',
-    textDark: '#0C4B45',
-    textLight: '#E0F3EB',
-    background: '#F0F9F5'
-  };
-
   // Obtener usuarios con paginación
-  const fetchUsers = async () => {
+  const fetchUsers = useCallback(async () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
@@ -67,11 +54,11 @@ const UserList = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [currentPage, usersPerPage]);
 
   useEffect(() => {
     fetchUsers();
-  }, [currentPage, usersPerPage]);
+  }, [fetchUsers]);
 
   // Filtrar usuarios
   useEffect(() => {

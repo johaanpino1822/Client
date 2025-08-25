@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -29,14 +29,17 @@ const ProductList = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [showFullscreenImage, setShowFullscreenImage] = useState(false);
   const [currentProductImages, setCurrentProductImages] = useState([]);
-  const [showDeleted, setShowDeleted] = useState(false); // Estado para mostrar eliminados
+  const [showDeleted, setShowDeleted] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchProducts();
-  }, [showDeleted]);
+  const getImageUrl = (imagePath) => {
+    if (!imagePath) return '/placeholder.jpg';
+    if (imagePath.startsWith('http')) return imagePath;
+    return `/uploads/products/${imagePath}`;
+  };
 
-  const fetchProducts = async () => {
+  // Función fetchProducts definida con useCallback para evitar dependencia circular
+  const fetchProducts = useCallback(async () => {
     try {
       setLoading(true);
       const endpoint = showDeleted ? '/api/products/deleted' : '/api/products';
@@ -66,13 +69,11 @@ const ProductList = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [showDeleted]);
 
-  const getImageUrl = (imagePath) => {
-    if (!imagePath) return '/placeholder.jpg';
-    if (imagePath.startsWith('http')) return imagePath;
-    return `/uploads/products/${imagePath}`;
-  };
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]); // ✅ Ahora fetchProducts es una dependencia válida
 
   const handleAddProduct = () => {
     navigate('/admin/products/new');

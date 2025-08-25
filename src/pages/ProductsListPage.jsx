@@ -48,17 +48,7 @@ const ProductsListPage = () => {
   const { cart, addToCart, updateQuantity } = useCart();
 
   // Paleta de colores premium
-  const colors = {
-    primary: '#0C4B45',
-    primaryLight: '#83F4E9',
-    primaryDark: '#083D38',
-    secondary: '#662D8F',
-    secondaryLight: '#F2A9FD',
-    accent: '#4CAF50',
-    textDark: '#0C4B45',
-    textLight: '#E0F3EB',
-    background: '#F0F9F5'
-  };
+  
 
   // Obtener productos con paginación
   useEffect(() => {

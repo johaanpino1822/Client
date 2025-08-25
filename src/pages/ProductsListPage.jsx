@@ -174,7 +174,7 @@ const ProductsListPage = () => {
         setIsAdded(false);
         setQuantity(1);
       }
-    }, [cart, product._id]);
+    }, [product._id]);
 
     const handleAddToCart = (e) => {
       e.preventDefault();

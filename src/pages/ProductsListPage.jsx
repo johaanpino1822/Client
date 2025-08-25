@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { 
   FaSearch, 
   FaFilter, 
-  FaSortAmountDown, 
+  
   FaTimes, 
   FaStar, 
   FaRegStar, 

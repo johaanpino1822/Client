@@ -13,7 +13,7 @@ function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 mr-3 text-blue-300" />
-                <span>Calle 50 #42-30, Medellín, Colombia</span>
+                <span>Calle 50 /42-30, Medellín, Colombia</span>
               </li>
               <li className="flex items-start">
                 <FaPhoneAlt className="mt-1 mr-3 text-blue-300" />
@@ -53,11 +53,11 @@ function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-blue-400">ENLACES RÁPIDOS</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="hover:text-blue-300 transition">Inicio</a></li>
-              <li><a href="#" className="hover:text-blue-300 transition">Catálogo</a></li>
-              <li><a href="#" className="hover:text-blue-300 transition">Promociones</a></li>
-              <li><a href="#" className="hover:text-blue-300 transition">Servicio Técnico</a></li>
-              <li><a href="#" className="hover:text-blue-300 transition">Políticas de Garantía</a></li>
+              <li><a href="/" className="hover:text-blue-300 transition">Inicio</a></li>
+              <li><a href="/" className="hover:text-blue-300 transition">Catálogo</a></li>
+              <li><a href="/" className="hover:text-blue-300 transition">Promociones</a></li>
+              <li><a href="/" className="hover:text-blue-300 transition">Servicio Técnico</a></li>
+              <li><a href="/" className="hover:text-blue-300 transition">Políticas de Garantía</a></li>
             </ul>
           </div>
 
@@ -65,13 +65,13 @@ function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-blue-400">SÍGUENOS</h3>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <a href="/" className="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition">
                 <FaFacebook size={18} />
               </a>
-              <a href="#" className="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <a href="/" className="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center transition">
                 <FaInstagram size={18} />
               </a>
-              <a href="#" className="bg-green-500 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <a href="/" className="bg-green-500 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition">
                 <FaWhatsapp size={18} />
               </a>
             </div>
@@ -106,8 +106,8 @@ function Footer() {
             <p>&copy; {new Date().getFullYear()} PC Vásquez SAS. Todos los derechos reservados.</p>
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-sm hover:text-blue-300 transition">Términos y condiciones</a>
-            <a href="#" className="text-sm hover:text-blue-300 transition">Política de privacidad</a>
+            <a href="/" className="text-sm hover:text-blue-300 transition">Términos y condiciones</a>
+            <a href="/" className="text-sm hover:text-blue-300 transition">Política de privacidad</a>
           </div>
         </div>
       </div>

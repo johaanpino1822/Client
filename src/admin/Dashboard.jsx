@@ -9,8 +9,7 @@ import {
   FiClock, 
   FiCheckCircle, 
   FiAlertCircle,
-  FiTrendingUp,
-  FiTrendingDown
+  
 } from 'react-icons/fi';
 import { m as motion } from 'framer-motion';
 

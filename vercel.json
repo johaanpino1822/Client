@@ -34,7 +34,12 @@
       "dest": "/index.html"
     }
   ],
+
   "env": {
-    "REACT_APP_API_URL": "https://tu-backend.vercel.app"
+    "REACT_APP_NODE_ENV": "production",
+    "REACT_APP_API_BASE_URL": "https://server-five-sage-40.vercel.app",
+    "REACT_APP_WOMPI_PUBLIC_KEY": "pub_prod_WixDpB6CttsHQtutUQTpYwwiWN54qEEc",
+    "REACT_APP_WOMPI_MERCHANT_ID": "1552149"
   }
+
 }

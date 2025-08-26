@@ -15,13 +15,19 @@ const HomePage = () => {
   const [error, setError] = useState(null);
   const [sliderReady, setSliderReady] = useState(false);
 
+  // Obtener la URL base de la API desde las variables de entorno
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
   // Función para obtener productos con manejo de errores
   const fetchProducts = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
       
-      const res = await api.get('/products');
+      // Usar la URL base correcta para la API
+      const res = await api.get('/products', {
+        baseURL: API_BASE_URL
+      });
       const data = res.data;
 
       if (!data || !Array.isArray(data.data)) {
@@ -38,7 +44,7 @@ const HomePage = () => {
       // Pequeño retraso para asegurar que el DOM esté listo
       setTimeout(() => setSliderReady(true), 100);
     }
-  }, []);
+  }, [API_BASE_URL]); // Agregar API_BASE_URL como dependencia
 
   useEffect(() => {
     fetchProducts();

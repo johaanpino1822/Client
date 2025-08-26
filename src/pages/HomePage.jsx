@@ -16,7 +16,7 @@ const HomePage = () => {
   const [sliderReady, setSliderReady] = useState(false);
 
   // Obtener la URL base de la API desde las variables de entorno
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://server-21pdm2e1h-jdpino3146396-gmailcoms-projects.vercel.app';
 
   // Función para obtener productos con manejo de errores
   const fetchProducts = useCallback(async () => {

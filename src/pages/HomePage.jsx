@@ -25,9 +25,10 @@ const HomePage = () => {
       setError(null);
       
       // Usar la URL base correcta para la API
-      const res = await api.get('/products', {
-        baseURL: API_BASE_URL
+      const res = await api.get('/api/products', {
+      baseURL: API_BASE_URL
       });
+
       const data = res.data;
 
       if (!data || !Array.isArray(data.data)) {

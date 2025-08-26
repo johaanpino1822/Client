@@ -46,7 +46,7 @@ const CartPage = () => {
   const WOMPI_API_URL = 'https://production.wompi.co/v1';
   
   const WOMPI_MERCHANT_ID = process.env.REACT_APP_WOMPI_MERCHANT_ID || '1552149';
-  const API_URL = process.env.REACT_APP_API_URL || 'https://tu-backend.vercel.app';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://server-nygak9c95-jdpino3146396-gmailcoms-projects.vercel.app/';
 
   // Función para manejar las URLs de imagen
   const getImageUrl = (imagePath) => {
